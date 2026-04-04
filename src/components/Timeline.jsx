@@ -43,17 +43,17 @@ export const Timeline = ({ data }) => {
                     <h3 className="text-2xl text-neutral-400 mb-4">Coding Mentor</h3>
                     <div className="relative mt-8">
                       <motion.div 
-                        className="relative w-48 h-48 p-3 rounded-lg bg-gradient-to-br from-purple-600/20 to-blue-600/20"
+                        className="relative w-48 h-48 p-3 rounded-lg bg-gradient-to-br from-[#F1603E]/20 to-[#F1603E]/12"
                         animate={{
                           boxShadow: [
-                            "0 0 10px rgba(147, 51, 234, 0.3), 0 0 20px rgba(147, 51, 234, 0.2), 0 0 30px rgba(147, 51, 234, 0.1)",
-                            "0 0 15px rgba(147, 51, 234, 0.5), 0 0 30px rgba(147, 51, 234, 0.3), 0 0 45px rgba(147, 51, 234, 0.1)",
-                            "0 0 10px rgba(147, 51, 234, 0.3), 0 0 20px rgba(147, 51, 234, 0.2), 0 0 30px rgba(147, 51, 234, 0.1)"
+                            "0 0 10px rgba(241, 96, 62, 0.3), 0 0 20px rgba(241, 96, 62, 0.2), 0 0 30px rgba(241, 96, 62, 0.1)",
+                            "0 0 15px rgba(241, 96, 62, 0.5), 0 0 30px rgba(241, 96, 62, 0.3), 0 0 45px rgba(241, 96, 62, 0.1)",
+                            "0 0 10px rgba(241, 96, 62, 0.3), 0 0 20px rgba(241, 96, 62, 0.2), 0 0 30px rgba(241, 96, 62, 0.1)"
                           ],
                           borderColor: [
-                            "rgba(147, 51, 234, 0.5)",
-                            "rgba(147, 51, 234, 1)",
-                            "rgba(147, 51, 234, 0.5)"
+                            "rgba(241, 96, 62, 0.5)",
+                            "rgba(241, 96, 62, 1)",
+                            "rgba(241, 96, 62, 0.5)"
                           ]
                         }}
                         transition={{
@@ -62,7 +62,7 @@ export const Timeline = ({ data }) => {
                           ease: "easeInOut"
                         }}
                         style={{
-                          border: "2px solid rgba(147, 51, 234, 0.5)"
+                          border: "2px solid rgba(241, 96, 62, 0.5)"
                         }}
                       >
                         <img 
@@ -75,9 +75,9 @@ export const Timeline = ({ data }) => {
                           className="absolute inset-0 rounded-lg"
                           animate={{
                             background: [
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 70%)",
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.3) 0%, transparent 70%)",
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 70%)"
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.1) 0%, transparent 70%)",
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.2) 0%, transparent 70%)",
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.1) 0%, transparent 70%)"
                             ]
                           }}
                           transition={{
@@ -145,6 +145,60 @@ export const Timeline = ({ data }) => {
                     </div>
                   </div>
                 </div>
+              ) : item.image ? (
+                <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
+                  <div className="flex flex-col items-start">
+                    <h3 className="text-sm text-neutral-500 mb-2">{item.date}</h3>
+                    <h3 className="text-4xl text-neutral-300 mb-2">{item.title}</h3>
+                    <h3 className="text-2xl text-neutral-400 mb-4">{item.job}</h3>
+                    <div className="relative mt-8">
+                      <motion.div 
+                        className={`relative w-48 h-48 p-3 rounded-lg bg-gradient-to-br ${item.image === "/assets/mza.png" ? "from-emerald-500/20 to-emerald-700/20" : item.image === "/assets/fixthe6ix.png" ? "from-blue-500/20 to-sky-500/20" : "from-slate-700/20 to-slate-500/20"}`}
+                        animate={{
+                          boxShadow: [
+                            `0 0 10px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 20px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.2), 0 0 30px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`,
+                            `0 0 15px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5), 0 0 30px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 45px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`,
+                            `0 0 10px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 20px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.2), 0 0 30px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`
+                          ],
+                          borderColor: [
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`,
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 1)`,
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`
+                          ]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        style={{
+                          border: `2px solid rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`
+                        }}
+                      >
+                        <img 
+                          src={item.image} 
+                          alt={`${item.title} logo`} 
+                          className="w-full h-full object-contain rounded"
+                        />
+                        <motion.div
+                          className="absolute inset-0 rounded-lg"
+                          animate={{
+                            background: [
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1) 0%, transparent 70%)`,
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.2) 0%, transparent 70%)`,
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1) 0%, transparent 70%)`
+                            ]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        />
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
                   <h3>{item.date}</h3>
@@ -163,17 +217,17 @@ export const Timeline = ({ data }) => {
                     <h3 className="text-xl text-neutral-400 mb-4">Coding Mentor</h3>
                     <div className="relative mt-6">
                       <motion.div 
-                        className="relative w-36 h-36 p-2 rounded-lg bg-gradient-to-br from-purple-600/20 to-blue-600/20"
+                        className="relative w-36 h-36 p-2 rounded-lg bg-gradient-to-br from-[#F1603E]/20 to-[#F1603E]/12"
                         animate={{
                           boxShadow: [
-                            "0 0 8px rgba(147, 51, 234, 0.3), 0 0 16px rgba(147, 51, 234, 0.2), 0 0 24px rgba(147, 51, 234, 0.1)",
-                            "0 0 12px rgba(147, 51, 234, 0.5), 0 0 24px rgba(147, 51, 234, 0.3), 0 0 36px rgba(147, 51, 234, 0.1)",
-                            "0 0 8px rgba(147, 51, 234, 0.3), 0 0 16px rgba(147, 51, 234, 0.2), 0 0 24px rgba(147, 51, 234, 0.1)"
+                            "0 0 8px rgba(241, 96, 62, 0.3), 0 0 16px rgba(241, 96, 62, 0.2), 0 0 24px rgba(241, 96, 62, 0.1)",
+                            "0 0 12px rgba(241, 96, 62, 0.5), 0 0 24px rgba(241, 96, 62, 0.3), 0 0 36px rgba(241, 96, 62, 0.1)",
+                            "0 0 8px rgba(241, 96, 62, 0.3), 0 0 16px rgba(241, 96, 62, 0.2), 0 0 24px rgba(241, 96, 62, 0.1)"
                           ],
                           borderColor: [
-                            "rgba(147, 51, 234, 0.5)",
-                            "rgba(147, 51, 234, 1)",
-                            "rgba(147, 51, 234, 0.5)"
+                            "rgba(241, 96, 62, 0.5)",
+                            "rgba(241, 96, 62, 1)",
+                            "rgba(241, 96, 62, 0.5)"
                           ]
                         }}
                         transition={{
@@ -182,7 +236,7 @@ export const Timeline = ({ data }) => {
                           ease: "easeInOut"
                         }}
                         style={{
-                          border: "2px solid rgba(147, 51, 234, 0.5)"
+                          border: "2px solid rgba(241, 96, 62, 0.5)"
                         }}
                       >
                         <img 
@@ -195,9 +249,9 @@ export const Timeline = ({ data }) => {
                           className="absolute inset-0 rounded-lg"
                           animate={{
                             background: [
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.05) 0%, transparent 70%)",
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.15) 0%, transparent 70%)",
-                              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.05) 0%, transparent 70%)"
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.05) 0%, transparent 70%)",
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.15) 0%, transparent 70%)",
+                              "radial-gradient(circle at 50% 50%, rgba(241, 96, 62, 0.05) 0%, transparent 70%)"
                             ]
                           }}
                           transition={{
@@ -253,6 +307,60 @@ export const Timeline = ({ data }) => {
                               "radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%)",
                               "radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
                               "radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%)"
+                            ]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        />
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+              ) : item.image ? (
+                <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden">
+                  <div className="flex flex-col items-start">
+                    <h3 className="text-sm text-neutral-500 mb-2">{item.date}</h3>
+                    <h3 className="text-2xl text-neutral-300 mb-2">{item.title}</h3>
+                    <h3 className="text-xl text-neutral-400 mb-4">{item.job}</h3>
+                    <div className="relative mt-6">
+                      <motion.div 
+                        className={`relative w-36 h-36 p-2 rounded-lg bg-gradient-to-br ${item.image === "/assets/mza.png" ? "from-emerald-500/20 to-emerald-700/20" : item.image === "/assets/fixthe6ix.png" ? "from-blue-500/20 to-sky-500/20" : "from-slate-700/20 to-slate-500/20"}`}
+                        animate={{
+                          boxShadow: [
+                            `0 0 8px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 16px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.2), 0 0 24px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`,
+                            `0 0 12px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5), 0 0 24px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 36px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`,
+                            `0 0 8px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.3), 0 0 16px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.2), 0 0 24px rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.1)`
+                          ],
+                          borderColor: [
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`,
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 1)`,
+                            `rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`
+                          ]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        style={{
+                          border: `2px solid rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.5)`
+                        }}
+                      >
+                        <img 
+                          src={item.image} 
+                          alt={`${item.title} logo`} 
+                          className="w-full h-full object-contain rounded"
+                        />
+                        <motion.div
+                          className="absolute inset-0 rounded-lg"
+                          animate={{
+                            background: [
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.05) 0%, transparent 70%)`,
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.15) 0%, transparent 70%)`,
+                              `radial-gradient(circle at 50% 50%, rgba(${item.image === "/assets/mza.png" ? "16, 185, 129" : item.image === "/assets/fixthe6ix.png" ? "59, 130, 246" : "148, 163, 184"}, 0.05) 0%, transparent 70%)`
                             ]
                           }}
                           transition={{

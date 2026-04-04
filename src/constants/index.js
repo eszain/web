@@ -189,12 +189,38 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/zaincodes77/",
+    href: "https://www.linkedin.com/in/zainsyed7/",
     icon: "/assets/socials/linkedIn.svg",
   },
 ];
 
 export const experiences = [
+  {
+    title: "Full Stack Developer Intern",
+    job: "MZA CPA Professional Corporation Toronto, ON",
+    date: "January 2026 - Present",
+    image: "/assets/mza.png",
+    contents: [
+      "Delivered a secure tax filing SaaS platform as measured by 500+ client onboardings and 500+ document uploads by building automated intake workflows with Next.js 14, Supabase PostgreSQL, and Cloudflare R2.",
+      "Reduced filing turnaround by 70% as measured by end-to-end processing time benchmarks by implementing structured upload pipelines, validation logic, and queue-based processing using TypeScript and Supabase Edge Functions.",
+      "Secured 200+ daily sessions as measured by reduced auth incidents by deploying Clerk 2FA, JWT-based mobile QR tokens, and role-aware access controls across Next.js APIs.",
+      "Enabled 1,000+ mobile document uploads as measured by consistent camera capture success rates by integrating camera-first UX, compression workflows, and resilient retry handling in React and JavaScript.",
+      "Streamlined payments by 85% as measured by reduced checkout friction and $3,000+ monthly transactions for 100+ clients through Stripe, Interac, and webhook verification integration in Node.js.",
+    ],
+  },
+  {
+    title: "Project Lead",
+    job: "YU Blueprint - FixThe6ix",
+    date: "January 2026 - Present",
+    image: "/assets/fixthe6ix.png",
+    contents: [
+      "Coordinating sprint-level delivery across 6+ active branches as measured by milestone completion for a 9-person cross-functional team using GitHub Projects and Next.js execution plans.",
+      "Aligning engineering throughput across 6 developers and 3 designers as measured by roadmap progress by running implementation sequencing, standups, and technical handoffs for a TypeScript codebase.",
+      "Managing 10+ GitHub Issues end-to-end as measured by structured acceptance criteria across 5 feature areas by triaging scope, assigning ownership, and guiding implementation with Prisma-backed APIs.",
+      "Enabling 5+ parallel feature branches as measured by zero merge conflicts on main by defining branching strategy, review gates, and CI workflows with GitHub Actions.",
+      "Unblocking auth, API, and UI tickets as measured by sustained release cadence over multi-sprint cycles by coordinating cross-team communication and resolving technical issues in Next.js and Prisma.",
+    ],
+  },
   {
     title: "Coding Mentor",
     job: "Code The Dream Durham, NC",
