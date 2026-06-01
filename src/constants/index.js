@@ -189,8 +189,13 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/zainsyed7/",
+    href: "https://www.linkedin.com/in/eszain/",
     icon: "/assets/socials/linkedIn.svg",
+  },
+    {
+    name: "Github",
+    href: "https://www.github.com/eszain/",
+    icon: "/assets/socials/github.svg",
   },
 ];
 
@@ -198,7 +203,7 @@ export const experiences = [
   {
     title: "Full Stack Developer Intern",
     job: "MZA CPA Professional Corporation Toronto, ON",
-    date: "January 2026 - Present",
+    date: "January 2026 - April 2026",
     image: "/assets/mza.png",
     contents: [
       "Delivered a secure tax filing SaaS platform as measured by 500+ client onboardings and 500+ document uploads by building automated intake workflows with Next.js 14, Supabase PostgreSQL, and Cloudflare R2.",

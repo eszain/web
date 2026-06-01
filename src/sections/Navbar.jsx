@@ -28,6 +28,11 @@ function Navigation() {
           Contact
         </a>
       </li>
+      <li className="nav-li">
+        <a className="nav-link" href="/Syed_Zain_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
+      </li>
     </ul>
   );
 }
